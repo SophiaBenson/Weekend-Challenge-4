@@ -15,7 +15,7 @@ $(document).ready(function(){
       url: '/postRoute',
       data: objectToSend
     });//end ajax postRoute
-    // window.location.href=window.location.href;
+    window.location.href=window.location.href;
 
   });//end submit button
 
@@ -38,9 +38,10 @@ $('#outputDiv').on('click', '#checkbox', function () {
   console.log('bird checked checkbox');
   var checked = $(this).val();
   console.log(checked);
-  // $(this).css('background', 'red');
-  if (checked.is('on')){
+  if ($('#checkbox').is(':checked')){
     console.log('bird has checked it seriously');
+    $(this).css("background", "red");
+
   }else {
     console.log('birds wings arent checking');
   }
